@@ -3978,3 +3978,157 @@ public class OdwroconaPolChoinkiLewa {
         scanner.close();
     }
 }
+//Napisz program wypisujący wartość zmiennej zadeklarowanej w kodzie programu. W języku java
+
+public class Main {
+    public static void main(String[] args) {
+        int liczba = 42; // Deklaracja i inicjalizacja zmiennej
+        System.out.println("Wartość zmiennej to: " + liczba); // Wypisanie wartości
+    }
+}
+//Napisz program, który pobierze od użytkownika dwie liczby (a, b), a następnie wyświetli sumę. 
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in); // Obiekt do odczytu danych
+
+        System.out.print("Podaj pierwszą liczbę (a): ");
+        int a = scanner.nextInt(); // Odczyt pierwszej liczby
+
+        System.out.print("Podaj drugą liczbę (b): ");
+        int b = scanner.nextInt(); // Odczyt drugiej liczby
+
+        int suma = a + b; // Obliczenie sumy
+
+        System.out.println("Suma liczb a + b = " + suma); // Wyświetlenie wyniku
+
+        scanner.close(); // Zamknięcie skanera
+    }
+}
+//Użytkownik najpierw wpisuje cyfrę: (1 – dla sumy, 2 – dla różnicy, 3 – dla iloczynu, 4 – dla ilorazu); następnie dwie liczby typu zmiennoprzecinkowego. Program ma wypisać wynik działania zależnie od tego co wybrał użytkownik. Należy dodać zabezpieczenie przed dzieleniem przez 0. 
+
+import java.util.Scanner;
+
+public class Kalkulator {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.println("Wybierz operację:");
+        System.out.println("1 – Suma");
+        System.out.println("2 – Różnica");
+        System.out.println("3 – Iloczyn");
+        System.out.println("4 – Iloraz");
+        System.out.print("Twój wybór: ");
+        int wybor = scanner.nextInt();
+
+        System.out.print("Podaj pierwszą liczbę: ");
+        double a = scanner.nextDouble();
+
+        System.out.print("Podaj drugą liczbę: ");
+        double b = scanner.nextDouble();
+
+        switch (wybor) {
+            case 1:
+                System.out.println("Wynik: " + (a + b));
+                break;
+            case 2:
+                System.out.println("Wynik: " + (a - b));
+                break;
+            case 3:
+                System.out.println("Wynik: " + (a * b));
+                break;
+            case 4:
+                if (b != 0) {
+                    System.out.println("Wynik: " + (a / b));
+                } else {
+                    System.out.println("Błąd: Dzielenie przez zero!");
+                }
+                break;
+            default:
+                System.out.println("Nieprawidłowy wybór operacji.");
+        }
+
+        scanner.close();
+    }
+}
+
+//Napisz program wyświetlający liczby parzyste w zakresie do 100. Użyj pętli for. 
+public class ParzysteDo100 {
+    public static void main(String[] args) {
+        System.out.println("Liczby parzyste od 0 do 100:");
+
+        for (int i = 0; i <= 100; i += 2) {
+            System.out.println(i);
+        }
+    }
+}
+//Napisz program, który sprawdzi czy wprowadzona przez użytkownika liczba jest liczbą pierwszą. 
+import java.util.Scanner;
+
+public class CzyPierwsza {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę całkowitą: ");
+        int liczba = scanner.nextInt();
+
+        if (liczba <= 1) {
+            System.out.println("Liczba nie jest pierwsza.");
+        } else {
+            boolean pierwsza = true;
+
+            for (int i = 2; i <= Math.sqrt(liczba); i++) {
+                if (liczba % i == 0) {
+                    pierwsza = false;
+                    break;
+                }
+            }
+
+            if (pierwsza) {
+                System.out.println("Liczba jest pierwsza.");
+            } else {
+                System.out.println("Liczba nie jest pierwsza.");
+            }
+        }
+
+        scanner.close();
+    }
+}
+
+//Wyświetlić tabliczkę mnożenia
+public class TabliczkaMnozenia {
+    public static void main(String[] args) {
+        System.out.println("Tabliczka mnożenia (1–10):");
+
+        for (int i = 1; i <= 10; i++) {
+            for (int j = 1; j <= 10; j++) {
+                System.out.printf("%4d", i * j);
+            }
+            System.out.println();
+        }
+    }
+}
+//Program liczący silnię.
+import java.util.Scanner;
+
+public class Silnia {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę całkowitą nieujemną: ");
+        int n = scanner.nextInt();
+
+        if (n < 0) {
+            System.out.println("Silnia nie jest zdefiniowana dla liczb ujemnych.");
+        } else {
+            long silnia = 1;
+            for (int i = 2; i <= n; i++) {
+                silnia *= i;
+            }
+            System.out.println("Silnia z " + n + " to: " + silnia);
+        }
+
+        scanner.close();
+    }
+}
