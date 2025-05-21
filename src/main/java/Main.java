@@ -209,7 +209,7 @@ public class Main {
     }
 }
 // 9. Napisz program, który sprawdza czy dane słowo jest palindromem.
-// katalog: Palindrome/Main.java
+// katalog: Palindrome/Main.javab    
 import java.util.Scanner;
 
 public class Main {
