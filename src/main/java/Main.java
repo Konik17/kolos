@@ -3837,3 +3837,144 @@ public class Main {
         }
     }
 //pasieka chuj.exe
+
+//choinka
+import java.util.Scanner;
+
+public class Choinka {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę wierszy (wysokość choinki): ");
+        int wysokosc = scanner.nextInt();
+
+        System.out.println("\nOto Twoja choinka:\n");
+
+        for (int i = 1; i <= wysokosc; i++) {
+            // Spacje
+            for (int j = 1; j <= (wysokosc - i); j++) {
+                System.out.print(" ");
+            }
+            // Gwiazdki
+            for (int k = 1; k <= (2 * i - 1); k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        // Opcjonalny pień choinki
+        if (wysokosc > 1) {
+            for (int i = 1; i < wysokosc; i++) {
+                System.out.print(" ");
+            }
+            System.out.println("|");
+        }
+
+        scanner.close();
+    }
+}
+
+//polowa choinki w lewo sciete
+import java.util.Scanner;
+
+public class PolChoinki {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę wierszy (wysokość pół-choinki): ");
+        int wysokosc = scanner.nextInt();
+
+        System.out.println("\nOto Twoja pół-choinka:\n");
+
+        for (int i = 1; i <= wysokosc; i++) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+//polowa choinki w prawo sciete
+import java.util.Scanner;
+
+public class PolChoinkiOdbicie {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę wierszy (wysokość pół-choinki): ");
+        int wysokosc = scanner.nextInt();
+
+        System.out.println("\nOto Twoja odbita pół-choinka:\n");
+
+        for (int i = 1; i <= wysokosc; i++) {
+            // Spacje z lewej
+            for (int j = 1; j <= (wysokosc - i); j++) {
+                System.out.print(" ");
+            }
+            // Gwiazdki
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+
+// odwrocona choinka w prawo sciete
+import java.util.Scanner;
+
+public class OdwroconaPolChoinki {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę wierszy (wysokość pół-choinki): ");
+        int wysokosc = scanner.nextInt();
+
+        System.out.println("\nOto Twoja odwrócona pół-choinka z odbiciem:\n");
+
+        for (int i = wysokosc; i >= 1; i--) {
+            // Spacje z lewej
+            for (int j = 1; j <= (wysokosc - i); j++) {
+                System.out.print(" ");
+            }
+            // Gwiazdki
+            for (int k = 1; k <= i; k++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
+// odwrocona choinka w lewo sciete
+import java.util.Scanner;
+
+public class OdwroconaPolChoinkiLewa {
+
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+
+        System.out.print("Podaj liczbę wierszy (wysokość pół-choinki): ");
+        int wysokosc = scanner.nextInt();
+
+        System.out.println("\nOto Twoja odwrócona pół-choinka w lewo:\n");
+
+        for (int i = wysokosc; i >= 1; i--) {
+            for (int j = 1; j <= i; j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+
+        scanner.close();
+    }
+}
