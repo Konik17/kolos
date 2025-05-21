@@ -1,3 +1,27 @@
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long iloczyn = 1;
+
+        System.out.println("Wprowadzaj liczby (5 kończy program):");
+
+        while (true) {
+            int liczba = scanner.nextInt();
+
+            if (liczba == 5) {
+                break;
+            }
+
+            if (liczba % 2 != 0) {
+                iloczyn *= liczba;
+            }
+        }
+
+        System.out.println("Iloczyn liczb nieparzystych: " + iloczyn);
+    }
+}
 // 1.Napisz program, który pozwala wprowadzić 5 liczb z klawiatury i znaleźć ich sumę i średnią.
 // SumAndAverage.java
 import java.util.Scanner;
@@ -748,27 +772,28 @@ public class Main {
 
 
 import java.util.Scanner;
+
 public class Main {
- public static void main(String[] args) {
- Scanner scanner = new Scanner(System.in);
- int product = 1; // Initialize product for multiplication
- int number;
- System.out.println("Enter even numbers to multiply (enter -5 to finish):");
-    while (true) {
-      number = scanner.nextInt(); // Read user input
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        long iloczyn = 1;
 
-      if (number == -5) {
-        break; // End input on -5
-      }
+        System.out.println("Wprowadzaj liczby (5 kończy program):");
 
-      if (number % 2 == 0) { // Check if the number is even
-        product *= number; // Multiply even numbers
-      }
+        while (true) {
+            int liczba = scanner.nextInt();
+
+            if (liczba == 5) {
+                break;
+            }
+
+            if (liczba % 2 != 0) {
+                iloczyn *= liczba;
+            }
+        }
+
+        System.out.println("Iloczyn liczb nieparzystych: " + iloczyn);
     }
-
-    System.out.println("The product of even numbers is: " + product);
-    scanner.close(); // Close the scanner
-  }
 }
 
 
